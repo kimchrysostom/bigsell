@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BIGISELL SUPPLIES & SERVICES</title>
+  <title>BIGISELL SUPLIES & SERVICES</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Lora:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
@@ -25,6 +25,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
       position: relative;
     }
 
@@ -52,6 +53,12 @@
       transform: translateY(-3px);
     }
 
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
     .social-links {
       display: flex;
       gap: 15px;
@@ -66,6 +73,21 @@
     .social-links a:hover {
       color: #ff6600;
       transform: translateY(-3px);
+    }
+
+    .login-btn {
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      border: 2px solid white;
+      padding: 8px 16px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .login-btn:hover {
+      background-color: white;
+      color: #005bb5;
     }
 
     #home {
@@ -199,8 +221,18 @@
         margin-bottom: 10px;
       }
 
+      .header-right {
+        flex-direction: column;
+        gap: 10px;
+      }
+
       .social-links {
         justify-content: center;
+      }
+
+      .login-btn {
+        padding: 6px 12px;
+        font-size: 14px;
       }
     }
   </style>
@@ -212,51 +244,52 @@
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#services">Services</a></li>
-        <li><a href="#team">Team</a></li>
         <li><a href="#about">About Us</a></li>
         <li><a href="#contact">Contact Us</a></li>
         <li><a href="#location">Our Location</a></li>
       </ul>
     </nav>
 
-    <div class="social-links">
-      <a href="https://web.facebook.com/search/top/?q=bigisell%20supplies%20and%20services" target="_blank" title="Facebook">
-        <i class="fab fa-facebook" style="font-size: 30px;"></i>
-      </a>
-      <a href="https://www.youtube.com/channel/UC3t34R9w45_7PaRbFy9Yjbw" target="_blank" title="YouTube">
-        <i class="fab fa-youtube" style="font-size: 30px;"></i>
-      </a>
-      <a href="https://www.tiktok.com/@bigisellsupplies?lang=en" target="_blank" title="TikTok">
-        <i class="fab fa-tiktok" style="font-size: 30px;"></i>
-      </a>
-      <a href="https://www.instagram.com/bigisellsuppliesandservices/" target="_blank" title="Instagram">
-        <i class="fab fa-instagram" style="font-size: 30px;"></i>
-      </a>
-      <a href="https://x.com/bigisellsupply" target="_blank" title="Twitter (X)">
-        <i class="fab fa-twitter" style="font-size: 30px;"></i>
-      </a>
-      <a href="https://ke.linkedin.com/in/seline-nasike-4358b827" target="_blank" title="LinkedIn">
-        <i class="fab fa-linkedin" style="font-size: 30px;"></i>
-      </a>
+    <div class="header-right">
+      <div class="social-links">
+        <a href="https://web.facebook.com/search/top/?q=bigisell%20supplies%20and%20services" target="_blank" title="Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://www.youtube.com/channel/UC3t34R9w45_7PaRbFy9Yjbw" target="_blank" title="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://www.tiktok.com/@bigisellsupplies?lang=en" target="_blank" title="TikTok">
+          <i class="fab fa-tiktok"></i>
+        </a>
+        <a href="https://www.instagram.com/bigisellsuppliesandservices/" target="_blank" title="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://x.com/bigisellsupply" target="_blank" title="Twitter (X)">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://ke.linkedin.com/in/seline-nasike-4358b827" target="_blank" title="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+      <a href="../auth/login.php" class="login-btn">Login</a>
     </div>
   </header>
 
-  <main>
-    <section id="home">
-      <div class="left-shadow"></div>
-      <div class="left-content">
-        <h1>BIGISELL SUPPLIES & SERVICES</h1>
-        <p>Premium automotive products, accessories, and maintenance solutions — all in one place.</p>
-        <button onclick="window.location.href='../services.product/serv.prod.php'">View Products & Services</button>
-      </div>
-    </section>
-  </main>
+  <section id="home">
+    <div class="left-shadow"></div>
+    <div class="left-content">
+      <h1>Welcome to Bigisell Suplies & Services</h1>
+      <p>Your trusted partner in quality vehicle care, repair, and product supply.</p>
+      <button onclick="window.location.href='../service.product'">Explore Services</button>
+    </div>
+  </section>
 
-  <a href="https://wa.me/254710872165" class="whatsapp-btn" target="_blank" title="Chat with us on WhatsApp">
+  <a href="https://wa.me/0710872165" class="whatsapp-btn" target="_blank" title="Chat on WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
 </body>
 </html>
+
 
 <section id="services">
 <!DOCTYPE html>
@@ -400,170 +433,21 @@
         <div class="service-card">
             <img src="../uploads/vehicle6.jpeg" alt="Vehicle Service 6">
             <div class="service-info">
-                <div class="service-title">Tire Service</div>
-                <div class="service-description">Tire rotation, balancing, and replacements to ensure the safety and performance of your vehicle.</div>
+                <div class="service-title">Tyre Service</div>
+                <div class="service-description">Tyre rotation, balancing, and replacements to ensure the safety and performance of your vehicle.</div>
             </div>
         </div>
     </div>
     
 </body>
 </html>
-</section>
-<section id="team">
-<?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "bigsell";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-$sql = "SELECT * FROM team_members";
-$result = $conn->query($sql);
-$conn->close();
-?>
-
-<?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "bigsell";
-
-// Establish a database connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-// Retrieve team members from the database
-$sql = "SELECT * FROM team_members";
-$result = $conn->query($sql);
-$conn->close();
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Meet Our Team - Garage Services</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Google Fonts (Optional) -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f4f6f9;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            padding: 40px;
-        }
-        .team-card {
-            transition: transform 0.3s ease;
-        }
-        .team-card:hover {
-            transform: translateY(-5px);
-        }
-        .team-image {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 3px solid #f4f6f9;
-        }
-        .team-role {
-            color: #6c757d;
-            font-size: 0.95em;
-        }
-        .card-title {
-            font-weight: 500;
-            font-size: 1.25em;
-        }
-        .advertisement {
-            background-color: #0066cc;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 1.5em;
-            font-weight: bold;
-        }
-        .team-members {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            justify-content: space-between;
-        }
-        .col-md-3 {
-            flex: 1 1 23%;
-        }
-    </style>
-</head>
-    <body>
-    
-<!-- Advertisement Section for Garage Services -->
-<div class="advertisement">
-    🚗 **Need a Reliable Garage Service?** 🚗 <br>
-    Our expert team is here to provide high-quality services for your vehicle's needs. From repairs to maintenance, we've got you covered! Contact us today for a free consultation!
-</div>
-
-<!-- Team Section -->
-<div class="container">
-    <h2 class="text-center mb-5">Meet Our Team</h2>
-
-    <div class="row justify-content-center g-4">
-        <?php if ($result->num_rows > 0): ?>
-            <div class="team-members">
-                <?php while ($row = $result->fetch_assoc()): 
-                    $images = explode(",", $row['images']);
-                    $firstImage = isset($images[0]) ? "../uploads/" . basename($images[0]) : '';
-                    $imageExists = file_exists($firstImage);
-                ?>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                        <div class="card text-center team-card p-3 shadow-sm border-0">
-                            <img src="<?= $imageExists ? $firstImage : 'https://via.placeholder.com/150' ?>" 
-                                 class="team-image mx-auto mb-3" alt="Team Member">
-                            <h5 class="card-title mb-1"><?= htmlspecialchars($row['name']) ?></h5>
-                            <p class="team-role"><?= htmlspecialchars($row['role']) ?></p>
-                        </div>
-                    </div>
-                <?php endwhile; ?>
-            </div>
-        <?php else: ?>
-            <div class="col-12">
-                <div class="alert alert-info text-center">
-                    No team members found in the database.
-                </div>
-            </div>
-        <?php endif; ?>
-    </div>
-</div>
-
-<!-- Bootstrap JS Bundle -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
-
-
-<!-- Bootstrap JS Bundle -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
 <section id="about">
 <section id="about-us" style="padding: 40px; background-color: #f8f9fa; font-family: Arial, sans-serif;">
   <div style="max-width: 800px; margin: auto;">
     <h2 style="color: #333333; text-align: center;">About Us</h2>
     <p style="font-size: 16px; color: #555555; line-height: 1.6;">
-      <strong>Bigisell Supplies and Services</strong> is your trusted partner in all things automotive. 
+      <strong>Bigisell Suplies and Services</strong> is your trusted partner in all things automotive. 
       From comprehensive garage services to high-quality automotive supplies, we are committed to keeping your vehicle in top shape—efficiently, affordably, and professionally.
     </p>
     <p style="font-size: 16px; color: #555555; line-height: 1.6;">
@@ -578,8 +462,7 @@ $conn->close();
 </section>
 
 
-<section id="contact">
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -713,10 +596,11 @@ $conn->close();
 </head>
 <body>
 
+<section id="contact">
     <div class="container">
         <!-- Header -->
         <header>
-            <h1>Contact Bigisell Supplies and Services</h1>
+            <h1>Contact Bigisell Suplies and Services</h1>
             <p>We’re here to answer your questions and provide assistance. Reach out to us!</p>
         </header>
 
@@ -727,11 +611,11 @@ $conn->close();
                 <p><strong>📍 Address:</strong> P.O. Box 23510-00100, Nairobi, Kenya</p>
                 <p><strong>☎ Phone:</strong> +254 710 872165 / +254 704 494192</p>
                 <p><strong>✉ Email:</strong> <a href="mailto:bigisell@gmail.com">bigisell@gmail.com</a></p>
-                <p><strong>🕐 Hours:</strong> Mon - Fri, 8:00 AM - 5:00 PM</p>
+                
             </div>
 
             <!-- Contact Form -->
-            <form method="POST" action="">
+            <form method="POST" action="" enctype="multipart/form-data">
                 <h2>Send Us a Message</h2>
 
                 <?php
@@ -744,14 +628,48 @@ $conn->close();
                     $message = trim($_POST["message"]);
 
                     if (!empty($name) && filter_var($email, FILTER_VALIDATE_EMAIL) && !empty($message)) {
-                        $headers = "From: $name <$email>" . "\r\n";
-                        $body = "You have received a new message:\n\n";
+                        $boundary = md5(time());
+
+                        // Email Headers
+                        $headers = "From: $name <$email>\r\n";
+                        $headers .= "MIME-Version: 1.0\r\n";
+                        $headers .= "Content-Type: multipart/mixed; boundary=\"{$boundary}\"\r\n";
+
+                        // Message Body
+                        $body = "--{$boundary}\r\n";
+                        $body .= "Content-Type: text/plain; charset=UTF-8\r\n";
+                        $body .= "Content-Transfer-Encoding: 7bit\r\n\r\n";
+                        $body .= "You have received a new message from the Bigisell website:\n\n";
                         $body .= "Name: $name\n";
                         $body .= "Email: $email\n\n";
-                        $body .= "Message:\n$message\n";
+                        $body .= "Message:\n$message\n\n";
 
+                        // Handle File Attachment
+                        if (!empty($_FILES['attachment']['tmp_name'])) {
+                            $file_tmp = $_FILES['attachment']['tmp_name'];
+                            $file_name = basename($_FILES['attachment']['name']);
+                            $file_size = $_FILES['attachment']['size'];
+                            $file_type = mime_content_type($file_tmp);
+
+                            if ($file_size <= 10485760) { // 10MB limit
+                                $file_content = chunk_split(base64_encode(file_get_contents($file_tmp)));
+
+                                $body .= "--{$boundary}\r\n";
+                                $body .= "Content-Type: $file_type; name=\"$file_name\"\r\n";
+                                $body .= "Content-Disposition: attachment; filename=\"$file_name\"\r\n";
+                                $body .= "Content-Transfer-Encoding: base64\r\n\r\n";
+                                $body .= $file_content . "\r\n";
+                            } else {
+                                echo '<div class="message error">❌ File size should not exceed 10MB.</div>';
+                                exit;
+                            }
+                        }
+
+                        $body .= "--{$boundary}--";
+
+                        // Send Mail
                         if (mail($to, $subject, $body, $headers)) {
-                            echo '<div class="message success">✅ Message sent successfully! Thank you, ' . htmlspecialchars($name) . '.</div>';
+                            echo '<div class="message success">✅ Message and file sent successfully! Thank you, ' . htmlspecialchars($name) . '.</div>';
                         } else {
                             echo '<div class="message error">❌ Something went wrong. Please try again later.</div>';
                         }
@@ -770,14 +688,18 @@ $conn->close();
                 <label for="message">Your Message:</label>
                 <textarea name="message" id="message" rows="6" placeholder="Type your message here..." required></textarea>
 
+                <label for="attachment">Attach a File (Optional):</label>
+                <input type="file" name="attachment" id="attachment">
+
                 <input type="submit" value="Send Message">
             </form>
         </div>
     </div>
+</section>
 
 </body>
 </html>
-</section>
+
 
 <section id="location">
 <!DOCTYPE html>
@@ -886,7 +808,7 @@ $conn->close();
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Footer with Icons</title>
+  <title></title>
   <!-- Font Awesome for Icons -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <style>
