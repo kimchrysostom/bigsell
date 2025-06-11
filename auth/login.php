@@ -1,11 +1,5 @@
 <?php
-session_start();
-
-// Database connection
-$conn = new mysqli("localhost", "root", "", "bigsell");
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include '../config/db.php';
 
 $message = "";
 $show_role_option = false;

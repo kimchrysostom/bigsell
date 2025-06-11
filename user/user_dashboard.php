@@ -271,7 +271,7 @@
           <i class="fab fa-linkedin"></i>
         </a>
       </div>
-     <a href="auth/login.php" class="login-btn">Login</a>
+     <a href="/bigsell/auth/login.php" class="login-btn">Login</a>
     </div>
   </header>
 

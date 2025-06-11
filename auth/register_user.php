@@ -1,11 +1,5 @@
 <?php
-// Connect to the 'bigsell' database
-$conn = new mysqli("localhost", "root", "", "bigsell");
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
+include '../config/db.php';
 $message = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['register_user'])) {

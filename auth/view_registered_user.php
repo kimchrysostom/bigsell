@@ -1,10 +1,5 @@
 <?php
-// Connect to the 'bigsell' database
-$conn = new mysqli("localhost", "root", "", "bigsell");
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include '../config/db.php';
 
 // Fetch all users
 $sql = "SELECT id, name, email, phone_number FROM users ORDER BY id DESC";

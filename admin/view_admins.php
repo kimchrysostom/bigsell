@@ -1,11 +1,5 @@
 <?php
-// Connect to the 'bigsell' database
-$conn = new mysqli("localhost", "root", "", "bigsell");
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
+include '../config/db.php';
 // Fetch all admins ordered by newest first
 $result = $conn->query("SELECT id, name, email, created_at FROM admins ORDER BY created_at DESC");
 ?>

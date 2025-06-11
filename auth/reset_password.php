@@ -1,7 +1,5 @@
 <?php
-session_start();
-$conn = new mysqli("localhost", "root", "", "bigsell");
-
+include '../config/db.php';
 $token = $_GET['token'] ?? '';
 $message = '';
 

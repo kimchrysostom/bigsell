@@ -1,17 +1,5 @@
 <?php
-$servername = "localhost";  // Replace with your server info
-$username = "root";         // Replace with your database username
-$password = "";             // Replace with your database password
-$dbname = "bigsell";        // The database you want to use
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
+require_once '../config/db.php'; // Database connection
 // Function to add a service
 function addService($name, $description) {
     global $conn;

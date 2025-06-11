@@ -1,14 +1,5 @@
 <?php
-// Database connection
-$servername = "localhost";  // Replace with your server info
-$username = "root";         // Replace with your database username
-$password = "";             // Replace with your database password
-$dbname = "bigsell";        // The database you want to use
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include '../config/db.php';
 
 // Handle the form submission (Add team member)
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['name']) && isset($_POST['role'])) {

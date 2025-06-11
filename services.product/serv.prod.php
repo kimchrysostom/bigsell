@@ -1,18 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "bigsell";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    // Log error to server
-    error_log("Connection failed: " . $conn->connect_error);
-    die("We are experiencing some issues. Please try again later.");
-}
+include '../config/db.php';
 
 // Define pagination settings
 $servicesPerPage = 5;
