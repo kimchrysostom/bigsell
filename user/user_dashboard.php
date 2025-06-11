@@ -280,7 +280,7 @@
     <div class="left-content">
       <h1>Welcome to Bigisell Suplies & Services</h1>
       <p>Your trusted partner in quality vehicle care, repair, and product supply.</p>
-      <button onclick="window.location.href='../service.product'">Explore Services</button>
+<button onclick="window.location.href='/bigsell/services.product/serv.prod.php'">Explore Services And Products</button>
     </div>
   </section>
 
