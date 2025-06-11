@@ -1,0 +1,12 @@
+RewriteEngine On
+
+# Redirect root URL to user_dashboard.php inside user folder
+RewriteRule ^$ user/user_dashboard.php [L]
+
+# Allow access to existing files and folders
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Prevent directory listing
+Options -Indexes

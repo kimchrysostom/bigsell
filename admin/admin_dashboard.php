@@ -78,6 +78,21 @@
       margin-top: 0;
     }
 
+    .back-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #2980b9;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      margin-top: 20px;
+      transition: background-color 0.3s;
+    }
+
+    .back-button:hover {
+      background-color: #1c5980;
+    }
   </style>
 </head>
 <body>
@@ -96,7 +111,11 @@
     <div class="header">
       <h1>Welcome to Admin Dashboard</h1>
     </div>
-    <!-- Add more cards as needed -->
+
+    <!-- Button to return to user page -->
+    <a href="http://localhost/bigsell/" class="back-button">Back to User Page</a>
+
+    <!-- You can add more dashboard cards here -->
   </div>
 
 </body>

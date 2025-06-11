@@ -100,14 +100,14 @@
       animation: imageFlip 20s infinite;
       overflow: hidden;
     }
-
-    @keyframes imageFlip {
-      0% { background-image: url('../uploads/garage1.jpeg'); }
-      25% { background-image: url('../uploads/garage2.jpeg'); }
-      50% { background-image: url('../uploads/garage3.jpeg'); }
-      75% { background-image: url('../uploads/garage4.jpeg'); }
-      100% { background-image: url('../uploads/garage1.jpeg'); }
-    }
+@keyframes imageFlip {
+  0% { background-image: url('/bigsell/uploads/garage1.jpeg'); }
+  25% { background-image: url('/bigsell/uploads/garage2.jpeg'); }
+  50% { background-image: url('/bigsell/uploads/garage3.jpeg'); }
+  75% { background-image: url('/bigsell/uploads/garage4.jpeg'); }
+  100% { background-image: url('/bigsell/uploads/garage1.jpeg'); }
+}
+    
 
     .left-shadow {
       position: absolute;
@@ -271,7 +271,7 @@
           <i class="fab fa-linkedin"></i>
         </a>
       </div>
-      <a href="../auth/login.php" class="login-btn">Login</a>
+     <a href="auth/login.php" class="login-btn">Login</a>
     </div>
   </header>
 
@@ -391,7 +391,7 @@
 
     <div class="services-container">
         <div class="service-card">
-            <img src="../uploads/vehicle1.jpeg" alt="Vehicle Service 1">
+            <img src="/bigsell/uploads/vehicle1.jpeg" alt="Vehicle Service 1">
             <div class="service-info">
                 <div class="service-title">Engine Repair</div>
                 <div class="service-description">We offer high-quality engine repair services, ensuring your vehicle runs smoothly and efficiently.</div>
@@ -399,7 +399,7 @@
         </div>
 
         <div class="service-card">
-            <img src="../uploads/vehicle2.jpeg" alt="Vehicle Service 2">
+            <img src="/bigsell/uploads/vehicle2.jpeg" alt="Vehicle Service 2">
             <div class="service-info">
                 <div class="service-title">Transmission Service</div>
                 <div class="service-description">Our transmission specialists are here to handle all your transmission needs, from repairs to replacements.</div>
@@ -407,7 +407,7 @@
         </div>
 
         <div class="service-card">
-            <img src="../uploads/vehicle3.jpeg" alt="Vehicle Service 3">
+            <img src="/bigsell/uploads/vehicle3.jpeg" alt="Vehicle Service 3">
             <div class="service-info">
                 <div class="service-title">Brake Service</div>
                 <div class="service-description">Ensure your safety on the road with our professional brake services, including inspections and replacements.</div>
@@ -415,7 +415,7 @@
         </div>
 
         <div class="service-card">
-            <img src="../uploads/vehicle4.jpeg" alt="Vehicle Service 4">
+            <img src="/bigsell/uploads/vehicle4.jpeg" alt="Vehicle Service 4">
             <div class="service-info">
                 <div class="service-title">Suspension Repair</div>
                 <div class="service-description">Our suspension repair services help keep your ride smooth and ensure better handling and safety.</div>
@@ -423,7 +423,7 @@
         </div>
 
         <div class="service-card">
-            <img src="../uploads/vehicle5.jpeg" alt="Vehicle Service 5">
+            <img src="/bigsell/uploads/vehicle5.jpeg" alt="Vehicle Service 5">
             <div class="service-info">
                 <div class="service-title">Oil Change</div>
                 <div class="service-description">Routine oil changes to keep your engine running at optimal performance, extending the life of your vehicle.</div>
@@ -431,7 +431,7 @@
         </div>
 
         <div class="service-card">
-            <img src="../uploads/vehicle6.jpeg" alt="Vehicle Service 6">
+            <img src="/bigsell/uploads/vehicle6.jpeg" alt="Vehicle Service 6">
             <div class="service-info">
                 <div class="service-title">Tyre Service</div>
                 <div class="service-description">Tyre rotation, balancing, and replacements to ensure the safety and performance of your vehicle.</div>
