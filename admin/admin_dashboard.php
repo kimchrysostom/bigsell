@@ -113,7 +113,7 @@
     </div>
 
     <!-- Button to return to user page -->
-    <a href="http://localhost/bigsell/" class="back-button">Back to User Page</a>
+    <a href="../index.php" class="back-button">Back to User Page</a>
 
     <!-- You can add more dashboard cards here -->
   </div>

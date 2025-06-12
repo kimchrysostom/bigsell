@@ -7,13 +7,22 @@ if (isset($_SESSION['admin_id'])) {
     exit();
 }
 
-// Handle form submission
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+// Detect environment and configure database credentials
+if ($_SERVER['HTTP_HOST'] === 'localhost') {
     $host = "localhost";
     $db = "bigsell";
-    $user = "root"; // adjust as needed
+    $user = "root";
     $pass = "";
+} else {
+    // Change these for your Truehost live database
+    $db_host = 'localhost';
+    $db_name = 'vrytxswq_bigisell';
+    $db_user = 'vrytxswq';
+    $db_pass = 'bigisell@selinanasike';
+}
 
+// Handle form submission
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conn = new mysqli($host, $user, $pass, $db);
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
