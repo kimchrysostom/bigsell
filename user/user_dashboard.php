@@ -10,7 +10,225 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
   <style>
-    /* ... (your full CSS styles remain unchanged) ... */
+    body {
+font-family: ‘Roboto’, sans-serif;
+margin: 0;
+padding: 0;
+background-color: #f9f9f9;
+color: #333;
+scroll-behavior: smooth;
+}
+
+header {
+  background: linear-gradient(135deg, #0073e6, #005bb5);
+  color: white;
+  padding: 20px 40px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-right: 25px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ff6600;
+  transform: translateY(-3px);
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-links a {
+  color: white;
+  font-size: 24px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ff6600;
+  transform: translateY(-3px);
+}
+
+.login-btn {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: white;
+  color: #005bb5;
+}
+
+#home {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  background-color: #000;
+  background-size: cover;
+  background-position: center;
+  animation: imageFlip 20s infinite;
+  overflow: hidden;
+}
+.left-shadow {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 40%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.left-content {
+  width: 40%;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+  color: white;
+}
+
+.left-content h1 {
+  font-size: 38px;
+  margin-bottom: 20px;
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #fff;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.8);
+}
+
+.left-content p {
+  font-size: 20px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  color: #ffcc00;
+  font-weight: 500;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+}
+
+.left-content button {
+  background-color: #ff6600;
+  padding: 14px 28px;
+  font-size: 18px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+}
+
+.left-content button:hover {
+  background-color: #e65c00;
+}
+
+.whatsapp-btn {
+  background-color: #25D366;
+  color: white;
+  font-size: 24px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-btn:hover {
+  background-color: #128C7E;
+}
+
+@media screen and (max-width: 768px) {
+  .left-shadow, .left-content {
+    width: 100%;
+  }
+
+  .left-content {
+    padding: 40px 20px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .left-content h1 {
+    font-size: 28px;
+  }
+
+  .left-content p {
+    font-size: 16px;
+  }
+
+  .left-content button {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .header-right {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .login-btn {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+}
+
   </style>
 </head>
 
@@ -183,8 +401,25 @@ $baseURL = ($_SERVER['HTTP_HOST'] === 'localhost') ? '/bigsell' : '';
                 <div class="service-description">Precision wheel alignment to improve tire life and control.</div>
             </div>
         </div>
+
+        <div class="service-card">
+            <img src="<?= $baseURL ?>/uploads/vehicle5.jpeg" alt="Oil Change">
+            <div class="service-info">
+                <div class="service-title">Oil Change</div>
+                <div class="service-description">Routine oil changes to keep your engine running smoothly and efficiently.</div>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <img src="<?= $baseURL ?>/uploads/vehicle6.jpeg" alt="Suspension Service">
+            <div class="service-info">
+                <div class="service-title">Suspension Service</div>
+                <div class="service-description">Complete suspension repair and diagnostics for a smoother ride.</div>
+            </div>
+        </div>
     </div>
 </section>
+
 
 <section id="about">
 <section id="about-us" style="padding: 40px; background-color: #f8f9fa; font-family: Arial, sans-serif;">
