@@ -1,15 +1,15 @@
 <?php
 if ($_SERVER['SERVER_NAME'] == 'localhost') {
-    // Local XAMPP settings
+    // Localhost (XAMPP or similar)
     $db_host = 'localhost';
     $db_name = 'bigsell';
     $db_user = 'root';
     $db_pass = '';
 } else {
-    // Truehost settings
+    // LIVE SERVER (Truehost)
     $db_host = 'localhost';
     $db_name = 'vrytxswq_bigisell';
-    $db_user = 'vrytxswq';
+    $db_user = 'vrytxswq_bigisel'; // ✅ FIXED: This was wrong before
     $db_pass = 'bigisell@selinanasike';
 }
 
@@ -19,4 +19,4 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 ?>
-<?php
+
